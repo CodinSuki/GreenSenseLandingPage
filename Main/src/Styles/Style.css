@@ -1,4 +1,9 @@
-/* ========== GLOBAL STYLES ========== */
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* BASE */
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +25,36 @@ a {
     text-decoration: none;
 }
 
-/* Reusable Button */
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: #e9f4e7;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #2b5c2b;
+    font-weight: 600;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #2b5c2b;
+}
+
+/* BUTTON */
 .btn-primary {
     display: inline-block;
     padding: 12px 28px;
@@ -35,13 +69,13 @@ a {
     background: #3a8c3a;
 }
 
-/* ========== HERO SECTION ========== */
+/* HERO SECTION */
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 80px 10%;
-    background: #e9f4e7;
+    background: linear-gradient(to right, #e9f4e7, #d7efd2);
 }
 
 .hero-content {
@@ -62,7 +96,7 @@ a {
     max-width: 400px;
 }
 
-/* ========== FEATURES SECTION ========== */
+/* FEATURES SECTION */
 .features {
     padding: 70px 10%;
     text-align: center;
@@ -81,6 +115,12 @@ a {
     border-radius: 14px;
     width: 280px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
 .feature-card img {
@@ -88,7 +128,7 @@ a {
     margin-bottom: 15px;
 }
 
-/* ========== VISUAL SECTION ========== */
+/* VISUAL SECTION */
 .visual {
     padding: 70px 10%;
     display: flex;
@@ -101,7 +141,7 @@ a {
     border-radius: 12px;
 }
 
-/* ========== INFO SECTION ========== */
+/* INFO SECTION */
 .info {
     padding: 60px 10%;
     background: #ffffff;
@@ -119,7 +159,7 @@ a {
     border-radius: 8px;
 }
 
-/* ========== CTA SECTION ========== */
+/* CTA SECTION */
 .cta {
     text-align: center;
     padding: 80px 10%;
@@ -131,7 +171,7 @@ a {
     display: inline-block;
 }
 
-/* ========== FOOTER ========== */
+/* FOOTER */
 footer {
     background: #2b5c2b;
     color: white;
@@ -145,7 +185,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
+/* RESPONSIVE */
 @media (max-width: 900px) {
     .hero,
     .visual {
